@@ -52,7 +52,7 @@
             hakkındaToolStripMenuItem = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
             tsbyeni = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
+            tsbac = new ToolStripButton();
             tsbkaydet = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             toolStripButton4 = new ToolStripButton();
@@ -90,38 +90,39 @@
             // miyeni
             // 
             miyeni.Name = "miyeni";
-            miyeni.Size = new Size(180, 22);
+            miyeni.Size = new Size(141, 22);
             miyeni.Text = "Yeni ";
             miyeni.Click += miyeni_Click;
             // 
             // açToolStripMenuItem
             // 
             açToolStripMenuItem.Name = "açToolStripMenuItem";
-            açToolStripMenuItem.Size = new Size(180, 22);
+            açToolStripMenuItem.Size = new Size(141, 22);
             açToolStripMenuItem.Text = "Aç";
+            açToolStripMenuItem.Click += toolStripButton2_Click;
             // 
             // mikaydet
             // 
             mikaydet.Name = "mikaydet";
-            mikaydet.Size = new Size(180, 22);
+            mikaydet.Size = new Size(141, 22);
             mikaydet.Text = "Kaydet";
             mikaydet.Click += tsbkaydet_Click;
             // 
             // farklıToolStripMenuItem
             // 
             farklıToolStripMenuItem.Name = "farklıToolStripMenuItem";
-            farklıToolStripMenuItem.Size = new Size(180, 22);
+            farklıToolStripMenuItem.Size = new Size(141, 22);
             farklıToolStripMenuItem.Text = "Farklı Kaydet";
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(177, 6);
+            toolStripMenuItem2.Size = new Size(138, 6);
             // 
             // çıkışToolStripMenuItem
             // 
             çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            çıkışToolStripMenuItem.Size = new Size(180, 22);
+            çıkışToolStripMenuItem.Size = new Size(141, 22);
             çıkışToolStripMenuItem.Text = "Çıkış";
             // 
             // düzenToolStripMenuItem
@@ -215,7 +216,7 @@
             // 
             toolStrip1.BackColor = Color.SandyBrown;
             toolStrip1.ImageScalingSize = new Size(32, 32);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { tsbyeni, toolStripButton2, tsbkaydet, toolStripSeparator1, toolStripButton4, toolStripButton5, toolStripButton6, toolStripSeparator2, toolStripButton7, toolStripButton8 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { tsbyeni, tsbac, tsbkaydet, toolStripSeparator1, toolStripButton4, toolStripButton5, toolStripButton6, toolStripSeparator2, toolStripButton7, toolStripButton8 });
             toolStrip1.Location = new Point(0, 24);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 54);
@@ -232,14 +233,15 @@
             tsbyeni.TextImageRelation = TextImageRelation.ImageAboveText;
             tsbyeni.Click += tsbyeni_Click;
             // 
-            // toolStripButton2
+            // tsbac
             // 
-            toolStripButton2.Image = Properties.Resources.Custom_Icon_Design_Flatastic_10_Open_file_32;
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(36, 51);
-            toolStripButton2.Text = "Aç";
-            toolStripButton2.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbac.Image = Properties.Resources.Custom_Icon_Design_Flatastic_10_Open_file_32;
+            tsbac.ImageTransparentColor = Color.Magenta;
+            tsbac.Name = "tsbac";
+            tsbac.Size = new Size(36, 51);
+            tsbac.Text = "Aç";
+            tsbac.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbac.Click += toolStripButton2_Click;
             // 
             // tsbkaydet
             // 
@@ -348,6 +350,7 @@
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Form1";
+            FormClosing += Form1_FormClosing;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             toolStrip1.ResumeLayout(false);
@@ -384,7 +387,7 @@
         private ToolStripSeparator toolStripMenuItem2;
         private ToolStripMenuItem çıkışToolStripMenuItem;
         private ToolStripButton tsbyeni;
-        private ToolStripButton toolStripButton2;
+        private ToolStripButton tsbac;
         private ToolStripButton tsbkaydet;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton toolStripButton4;
