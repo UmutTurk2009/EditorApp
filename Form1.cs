@@ -30,7 +30,7 @@ namespace EditorApp
             DialogResult  cevap= saveFileDialog1.ShowDialog();
             if (cevap == DialogResult.OK)////kullanýcý tammam dediyse
             {
-                saveFileDialog1.Filter = "Metin Dosyalarý|*.txt|Tüm Dosyalar|*.*";
+                saveFileDialog1.Filter = "Metin Dosyalarý|*.txt|Tüm Dosyalar|*.*";//filtre yapýl
                 saveFileDialog1.DefaultExt = "*.txt";
                 string secilenDosya = saveFileDialog1.FileName;
                 // File sýnýfý dosya iþlemleri için kullanýlýr
