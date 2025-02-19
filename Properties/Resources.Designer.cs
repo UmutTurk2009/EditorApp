@@ -133,6 +133,16 @@ namespace EditorApp.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Gartoon_Team_Gartoon_Apps_Accessories_text_editor_32 {
+            get {
+                object obj = ResourceManager.GetObject("Gartoon-Team-Gartoon-Apps-Accessories-text-editor.32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Google_Noto_Emoji_Objects_62851_magnifying_glass_tilted_right_32 {
             get {
                 object obj = ResourceManager.GetObject("Google-Noto-Emoji-Objects-62851-magnifying-glass-tilted-right.32", resourceCulture);

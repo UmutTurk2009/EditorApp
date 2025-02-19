@@ -37,17 +37,17 @@
             toolStripMenuItem2 = new ToolStripSeparator();
             çıkışToolStripMenuItem = new ToolStripMenuItem();
             düzenToolStripMenuItem = new ToolStripMenuItem();
-            kesToolStripMenuItem = new ToolStripMenuItem();
-            kopyalaToolStripMenuItem = new ToolStripMenuItem();
-            yapıştırToolStripMenuItem = new ToolStripMenuItem();
+            mikes = new ToolStripMenuItem();
+            mikopyala = new ToolStripMenuItem();
+            miyapıştır = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripSeparator();
             bulToolStripMenuItem = new ToolStripMenuItem();
             görünümToolStripMenuItem = new ToolStripMenuItem();
             temalarToolStripMenuItem = new ToolStripMenuItem();
-            koyuTemaToolStripMenuItem = new ToolStripMenuItem();
-            açıkTemaToolStripMenuItem = new ToolStripMenuItem();
-            yazıTipiToolStripMenuItem = new ToolStripMenuItem();
-            yazaıRengiToolStripMenuItem = new ToolStripMenuItem();
+            mikoyutema = new ToolStripMenuItem();
+            miaciktema = new ToolStripMenuItem();
+            miyazıtipi = new ToolStripMenuItem();
+            miyazırengi = new ToolStripMenuItem();
             yardımToolStripMenuItem = new ToolStripMenuItem();
             hakkındaToolStripMenuItem = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
@@ -55,12 +55,12 @@
             tsbac = new ToolStripButton();
             tsbkaydet = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
-            toolStripButton4 = new ToolStripButton();
-            toolStripButton5 = new ToolStripButton();
-            toolStripButton6 = new ToolStripButton();
+            tsbkes = new ToolStripButton();
+            tsbkopyala = new ToolStripButton();
+            tsbyapıştır = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
-            toolStripButton7 = new ToolStripButton();
-            toolStripButton8 = new ToolStripButton();
+            tsbbul = new ToolStripButton();
+            tsbhakkinda = new ToolStripButton();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             txtbelge = new TextBox();
@@ -72,7 +72,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = Color.LightSteelBlue;
+            menuStrip1.BackColor = Color.BlanchedAlmond;
             menuStrip1.Items.AddRange(new ToolStripItem[] { dosyaToolStripMenuItem, düzenToolStripMenuItem, görünümToolStripMenuItem, yardımToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
@@ -127,28 +127,31 @@
             // 
             // düzenToolStripMenuItem
             // 
-            düzenToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { kesToolStripMenuItem, kopyalaToolStripMenuItem, yapıştırToolStripMenuItem, toolStripMenuItem1, bulToolStripMenuItem });
+            düzenToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mikes, mikopyala, miyapıştır, toolStripMenuItem1, bulToolStripMenuItem });
             düzenToolStripMenuItem.Name = "düzenToolStripMenuItem";
             düzenToolStripMenuItem.Size = new Size(52, 20);
             düzenToolStripMenuItem.Text = "Düzen";
             // 
-            // kesToolStripMenuItem
+            // mikes
             // 
-            kesToolStripMenuItem.Name = "kesToolStripMenuItem";
-            kesToolStripMenuItem.Size = new Size(116, 22);
-            kesToolStripMenuItem.Text = "Kes";
+            mikes.Name = "mikes";
+            mikes.Size = new Size(116, 22);
+            mikes.Text = "Kes";
+            mikes.Click += mikes_Click;
             // 
-            // kopyalaToolStripMenuItem
+            // mikopyala
             // 
-            kopyalaToolStripMenuItem.Name = "kopyalaToolStripMenuItem";
-            kopyalaToolStripMenuItem.Size = new Size(116, 22);
-            kopyalaToolStripMenuItem.Text = "Kopyala";
+            mikopyala.Name = "mikopyala";
+            mikopyala.Size = new Size(116, 22);
+            mikopyala.Text = "Kopyala";
+            mikopyala.Click += mikopyala_Click;
             // 
-            // yapıştırToolStripMenuItem
+            // miyapıştır
             // 
-            yapıştırToolStripMenuItem.Name = "yapıştırToolStripMenuItem";
-            yapıştırToolStripMenuItem.Size = new Size(116, 22);
-            yapıştırToolStripMenuItem.Text = "Yapıştır";
+            miyapıştır.Name = "miyapıştır";
+            miyapıştır.Size = new Size(116, 22);
+            miyapıştır.Text = "Yapıştır";
+            miyapıştır.Click += miyapıştır_Click;
             // 
             // toolStripMenuItem1
             // 
@@ -163,41 +166,45 @@
             // 
             // görünümToolStripMenuItem
             // 
-            görünümToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { temalarToolStripMenuItem, yazıTipiToolStripMenuItem, yazaıRengiToolStripMenuItem });
+            görünümToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { temalarToolStripMenuItem, miyazıtipi, miyazırengi });
             görünümToolStripMenuItem.Name = "görünümToolStripMenuItem";
             görünümToolStripMenuItem.Size = new Size(70, 20);
             görünümToolStripMenuItem.Text = "Görünüm";
             // 
             // temalarToolStripMenuItem
             // 
-            temalarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { koyuTemaToolStripMenuItem, açıkTemaToolStripMenuItem });
+            temalarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mikoyutema, miaciktema });
             temalarToolStripMenuItem.Name = "temalarToolStripMenuItem";
             temalarToolStripMenuItem.Size = new Size(133, 22);
             temalarToolStripMenuItem.Text = "Temalar";
             // 
-            // koyuTemaToolStripMenuItem
+            // mikoyutema
             // 
-            koyuTemaToolStripMenuItem.Name = "koyuTemaToolStripMenuItem";
-            koyuTemaToolStripMenuItem.Size = new Size(132, 22);
-            koyuTemaToolStripMenuItem.Text = "Koyu Tema";
+            mikoyutema.Name = "mikoyutema";
+            mikoyutema.Size = new Size(132, 22);
+            mikoyutema.Text = "Koyu Tema";
+            mikoyutema.Click += mikoyutema_Click;
             // 
-            // açıkTemaToolStripMenuItem
+            // miaciktema
             // 
-            açıkTemaToolStripMenuItem.Name = "açıkTemaToolStripMenuItem";
-            açıkTemaToolStripMenuItem.Size = new Size(132, 22);
-            açıkTemaToolStripMenuItem.Text = "Açık Tema";
+            miaciktema.Name = "miaciktema";
+            miaciktema.Size = new Size(132, 22);
+            miaciktema.Text = "Açık Tema";
+            miaciktema.Click += miaciktema_Click;
             // 
-            // yazıTipiToolStripMenuItem
+            // miyazıtipi
             // 
-            yazıTipiToolStripMenuItem.Name = "yazıTipiToolStripMenuItem";
-            yazıTipiToolStripMenuItem.Size = new Size(133, 22);
-            yazıTipiToolStripMenuItem.Text = "Yazı Tipi ";
+            miyazıtipi.Name = "miyazıtipi";
+            miyazıtipi.Size = new Size(133, 22);
+            miyazıtipi.Text = "Yazı Tipi ";
+            miyazıtipi.Click += miyazıtipi_Click;
             // 
-            // yazaıRengiToolStripMenuItem
+            // miyazırengi
             // 
-            yazaıRengiToolStripMenuItem.Name = "yazaıRengiToolStripMenuItem";
-            yazaıRengiToolStripMenuItem.Size = new Size(133, 22);
-            yazaıRengiToolStripMenuItem.Text = "Yazaı Rengi";
+            miyazırengi.Name = "miyazırengi";
+            miyazırengi.Size = new Size(133, 22);
+            miyazırengi.Text = "Yazaı Rengi";
+            miyazırengi.Click += miyazırengi_Click;
             // 
             // yardımToolStripMenuItem
             // 
@@ -214,9 +221,9 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.BackColor = Color.SandyBrown;
+            toolStrip1.BackColor = Color.FromArgb(192, 255, 192);
             toolStrip1.ImageScalingSize = new Size(32, 32);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { tsbyeni, tsbac, tsbkaydet, toolStripSeparator1, toolStripButton4, toolStripButton5, toolStripButton6, toolStripSeparator2, toolStripButton7, toolStripButton8 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { tsbyeni, tsbac, tsbkaydet, toolStripSeparator1, tsbkes, tsbkopyala, tsbyapıştır, toolStripSeparator2, tsbbul, tsbhakkinda });
             toolStrip1.Location = new Point(0, 24);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 54);
@@ -258,59 +265,64 @@
             toolStripSeparator1.Name = "toolStripSeparator1";
             toolStripSeparator1.Size = new Size(6, 54);
             // 
-            // toolStripButton4
+            // tsbkes
             // 
-            toolStripButton4.Image = Properties.Resources.Custom_Icon_Design_Flatastic_1_Cut_32;
-            toolStripButton4.ImageTransparentColor = Color.Magenta;
-            toolStripButton4.Name = "toolStripButton4";
-            toolStripButton4.Size = new Size(36, 51);
-            toolStripButton4.Text = "Kes";
-            toolStripButton4.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbkes.Image = Properties.Resources.Custom_Icon_Design_Flatastic_1_Cut_32;
+            tsbkes.ImageTransparentColor = Color.Magenta;
+            tsbkes.Name = "tsbkes";
+            tsbkes.Size = new Size(36, 51);
+            tsbkes.Text = "Kes";
+            tsbkes.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbkes.Click += mikes_Click;
             // 
-            // toolStripButton5
+            // tsbkopyala
             // 
-            toolStripButton5.Image = Properties.Resources.Ampeross_Qetto_2_Copy_32;
-            toolStripButton5.ImageTransparentColor = Color.Magenta;
-            toolStripButton5.Name = "toolStripButton5";
-            toolStripButton5.Size = new Size(53, 51);
-            toolStripButton5.Text = "Kopyala";
-            toolStripButton5.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbkopyala.Image = Properties.Resources.Ampeross_Qetto_2_Copy_32;
+            tsbkopyala.ImageTransparentColor = Color.Magenta;
+            tsbkopyala.Name = "tsbkopyala";
+            tsbkopyala.Size = new Size(53, 51);
+            tsbkopyala.Text = "Kopyala";
+            tsbkopyala.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbkopyala.Click += mikopyala_Click;
             // 
-            // toolStripButton6
+            // tsbyapıştır
             // 
-            toolStripButton6.Image = Properties.Resources.Franksouza183_Fs_Actions_paste_32;
-            toolStripButton6.ImageTransparentColor = Color.Magenta;
-            toolStripButton6.Name = "toolStripButton6";
-            toolStripButton6.Size = new Size(49, 51);
-            toolStripButton6.Text = "Yapıştır";
-            toolStripButton6.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbyapıştır.Image = Properties.Resources.Franksouza183_Fs_Actions_paste_32;
+            tsbyapıştır.ImageTransparentColor = Color.Magenta;
+            tsbyapıştır.Name = "tsbyapıştır";
+            tsbyapıştır.Size = new Size(49, 51);
+            tsbyapıştır.Text = "Yapıştır";
+            tsbyapıştır.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbyapıştır.Click += miyapıştır_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
             toolStripSeparator2.Size = new Size(6, 54);
             // 
-            // toolStripButton7
+            // tsbbul
             // 
-            toolStripButton7.Image = Properties.Resources.Google_Noto_Emoji_Objects_62851_magnifying_glass_tilted_right_32;
-            toolStripButton7.ImageTransparentColor = Color.Magenta;
-            toolStripButton7.Name = "toolStripButton7";
-            toolStripButton7.Size = new Size(36, 51);
-            toolStripButton7.Text = "Bul";
-            toolStripButton7.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbbul.Image = Properties.Resources.Google_Noto_Emoji_Objects_62851_magnifying_glass_tilted_right_32;
+            tsbbul.ImageTransparentColor = Color.Magenta;
+            tsbbul.Name = "tsbbul";
+            tsbbul.Size = new Size(36, 51);
+            tsbbul.Text = "Bul";
+            tsbbul.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbbul.Click += tsbbul_Click;
             // 
-            // toolStripButton8
+            // tsbhakkinda
             // 
-            toolStripButton8.Image = Properties.Resources.Aha_Soft_People_User_info_32;
-            toolStripButton8.ImageTransparentColor = Color.Magenta;
-            toolStripButton8.Name = "toolStripButton8";
-            toolStripButton8.Size = new Size(61, 51);
-            toolStripButton8.Text = "Hakkında";
-            toolStripButton8.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbhakkinda.Image = Properties.Resources.Aha_Soft_People_User_info_32;
+            tsbhakkinda.ImageTransparentColor = Color.Magenta;
+            tsbhakkinda.Name = "tsbhakkinda";
+            tsbhakkinda.Size = new Size(61, 51);
+            tsbhakkinda.Text = "Hakkında";
+            tsbhakkinda.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbhakkinda.Click += tsbhakkinda_Click;
             // 
             // statusStrip1
             // 
-            statusStrip1.BackColor = Color.Bisque;
+            statusStrip1.BackColor = Color.DeepSkyBlue;
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
             statusStrip1.Location = new Point(0, 428);
             statusStrip1.Name = "statusStrip1";
@@ -326,6 +338,7 @@
             // 
             // txtbelge
             // 
+            txtbelge.BackColor = Color.Aquamarine;
             txtbelge.Dock = DockStyle.Fill;
             txtbelge.Location = new Point(0, 78);
             txtbelge.Multiline = true;
@@ -368,20 +381,20 @@
         private ToolStripMenuItem düzenToolStripMenuItem;
         private ToolStripMenuItem görünümToolStripMenuItem;
         private ToolStripMenuItem temalarToolStripMenuItem;
-        private ToolStripMenuItem koyuTemaToolStripMenuItem;
-        private ToolStripMenuItem açıkTemaToolStripMenuItem;
+        private ToolStripMenuItem mikoyutema;
+        private ToolStripMenuItem miaciktema;
         private ToolStripMenuItem yardımToolStripMenuItem;
         private ToolStrip toolStrip1;
         private ToolStripMenuItem miyeni;
         private ToolStripMenuItem açToolStripMenuItem;
         private ToolStripMenuItem mikaydet;
-        private ToolStripMenuItem kesToolStripMenuItem;
-        private ToolStripMenuItem kopyalaToolStripMenuItem;
-        private ToolStripMenuItem yapıştırToolStripMenuItem;
+        private ToolStripMenuItem mikes;
+        private ToolStripMenuItem mikopyala;
+        private ToolStripMenuItem miyapıştır;
         private ToolStripSeparator toolStripMenuItem1;
         private ToolStripMenuItem bulToolStripMenuItem;
-        private ToolStripMenuItem yazıTipiToolStripMenuItem;
-        private ToolStripMenuItem yazaıRengiToolStripMenuItem;
+        private ToolStripMenuItem miyazıtipi;
+        private ToolStripMenuItem miyazırengi;
         private ToolStripMenuItem hakkındaToolStripMenuItem;
         private ToolStripMenuItem farklıToolStripMenuItem;
         private ToolStripSeparator toolStripMenuItem2;
@@ -390,12 +403,12 @@
         private ToolStripButton tsbac;
         private ToolStripButton tsbkaydet;
         private ToolStripSeparator toolStripSeparator1;
-        private ToolStripButton toolStripButton4;
-        private ToolStripButton toolStripButton5;
-        private ToolStripButton toolStripButton6;
+        private ToolStripButton tsbkes;
+        private ToolStripButton tsbkopyala;
+        private ToolStripButton tsbyapıştır;
         private ToolStripSeparator toolStripSeparator2;
-        private ToolStripButton toolStripButton7;
-        private ToolStripButton toolStripButton8;
+        private ToolStripButton tsbbul;
+        private ToolStripButton tsbhakkinda;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private TextBox txtbelge;
